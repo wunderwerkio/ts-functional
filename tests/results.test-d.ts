@@ -28,20 +28,20 @@ function testTypeNarrowing() {
 function testExpect() {
   const result = divide(1, 0);
 
-  expectType<number>(result.expect('Expected number'));
+  expectType<number>(result.expect("Expected number"));
 
   if (result.err) {
-    expectType<never>(result.expect('Expected number'));
+    expectType<never>(result.expect("Expected number"));
   }
 }
 
 function testExpectErr() {
   const result = divide(1, 0);
 
-  expectType<string>(result.expectErr('Expected error'));
+  expectType<string>(result.expectErr("Expected error"));
 
   if (result.ok) {
-    expectType<never>(result.expectErr('Expected error'));
+    expectType<never>(result.expectErr("Expected error"));
   }
 }
 
