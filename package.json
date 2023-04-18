@@ -1,6 +1,6 @@
 {
   "name": "@wunderwerk/ts-functional",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "type": "module",
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
