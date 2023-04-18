@@ -56,5 +56,11 @@
       "types": "./dist/results/index.d.ts",
       "import": "./dist/results/index.mjs"
     }
-  }
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ]
 }
