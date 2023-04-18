@@ -1,0 +1,8 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@wunderwerk/ts-functional": "0.0.0"
+  },
+  "changesets": []
+}
