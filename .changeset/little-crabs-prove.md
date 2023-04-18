@@ -1,5 +1,5 @@
 ---
-"@wunderwerk/ts-functional": minor
+"@wunderwerk/ts-functional": major
 ---
 
 Initial release
