@@ -6,9 +6,10 @@ import { toString } from "../utils/index.js";
  * @template T - The type of the value in the Ok case.
  * @template TError - The type of the value in the Err case.
  */
-interface Result<T, TError> {
+interface BaseResult<T, TError> {
   readonly ok: boolean;
   readonly err: boolean;
+  readonly val: T | TError;
 
   /**
    * Get the value from the Ok case, or throw an error if the Result is an Err.
@@ -46,7 +47,7 @@ interface Result<T, TError> {
  *
  * @template TError - Type of the error.
  */
-export class ResultErr<TError> implements Result<never, TError> {
+export class ResultErr<TError> implements BaseResult<never, TError> {
   readonly ok = false;
   readonly err = true;
   readonly val: TError;
@@ -86,7 +87,7 @@ export class ResultErr<TError> implements Result<never, TError> {
  *
  * @template T - Type of the value.
  */
-export class ResultOk<T> implements Result<T, never> {
+export class ResultOk<T> implements BaseResult<T, never> {
   readonly ok = true;
   readonly err = false;
   readonly val: T;
@@ -143,7 +144,7 @@ export const Err = <TError>(val: TError) => new ResultErr(val);
  */
 export const wrap = <T, TError = unknown>(
   operation: () => T
-): Result<T, TError> => {
+): BaseResult<T, TError> => {
   try {
     return Ok(operation());
   } catch (err) {
@@ -159,7 +160,7 @@ export const wrap = <T, TError = unknown>(
  */
 export const wrapAsync = async <T, TError = unknown>(
   operation: () => Promise<T>
-): Promise<Result<T, TError>> => {
+): Promise<BaseResult<T, TError>> => {
   try {
     return Ok(await operation());
   } catch (e) {
@@ -176,3 +177,5 @@ export const Result = {
   wrap,
   wrapAsync,
 };
+
+export type Result<T, TError> = ResultOk<T> | ResultErr<TError>;
