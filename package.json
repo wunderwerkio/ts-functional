@@ -25,6 +25,7 @@
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-esbuild": "^5.0.0",
     "ts-node": "^10.9.1",
+    "tsd": "^0.28.1",
     "typescript": "^5.0.4"
   },
   "scripts": {
@@ -32,9 +33,9 @@
     "lint": "eslint --ext .ts src --max-warnings 0",
     "format:check": "prettier --check '**/*.{ts,tsx}'",
     "format:write": "prettier --write '**/*.{ts,tsx}'",
-    "test": "NODE_NO_WARNINGS=1 ava",
+    "test": "NODE_NO_WARNINGS=1 ava && tsd -t dist/results/index.d.ts --files tests/**/*.test-d.ts",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
-    "check-all": "pnpm run '/(build|lint|test|typecheck)/'",
+    "check-all": "pnpm run build && pnpm run '/(lint|test|typecheck)/'",
     "version-package": "pnpm run check-all && changeset version",
     "publish-package": "pnpm run check-all && changeset publish",
     "prepare": "husky install"
