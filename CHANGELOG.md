@@ -1,5 +1,11 @@
 # @wunderwerk/ts-functional
 
+## 1.0.0-beta.1
+
+### Patch Changes
+
+- [`7e89494`](https://github.com/wunderwerkio/ts-functional/commit/7e8949425e2eed4c353b1979aed2c483c2b77e18) Thanks [@chfoidl](https://github.com/chfoidl)! - Fix contents of npm package
+
 ## 1.0.0-beta.0
 
 ### Major Changes
