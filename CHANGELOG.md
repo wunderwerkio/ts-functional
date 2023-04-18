@@ -1,5 +1,11 @@
 # @wunderwerk/ts-functional
 
+## 1.0.0-beta.2
+
+### Patch Changes
+
+- [#5](https://github.com/wunderwerkio/ts-functional/pull/5) [`8996245`](https://github.com/wunderwerkio/ts-functional/commit/8996245627bd280caf2081fb73fab186a674ae45) Thanks [@chfoidl](https://github.com/chfoidl)! - Fix type narrowing of `Result` type.
+
 ## 1.0.0-beta.1
 
 ### Patch Changes
