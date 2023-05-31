@@ -2,7 +2,7 @@ import dts from "rollup-plugin-dts";
 import esbuild from "rollup-plugin-esbuild";
 
 const bundle = (name) => (configCallback) => {
-  const config = configCallback(`dist/${name}/index`);
+  const config = configCallback(`${name}/index`);
 
   return {
     ...config,

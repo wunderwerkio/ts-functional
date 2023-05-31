@@ -33,7 +33,7 @@
     "lint": "eslint --ext .ts src --max-warnings 0",
     "format:check": "prettier --check '**/*.{ts,tsx}'",
     "format:write": "prettier --write '**/*.{ts,tsx}'",
-    "test": "NODE_NO_WARNINGS=1 ava && tsd -t dist/results/index.d.ts --files tests/**/*.test-d.ts",
+    "test": "NODE_NO_WARNINGS=1 ava && tsd -t results/index.d.ts --files tests/**/*.test-d.ts",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
     "check-all": "pnpm run build && pnpm run '/(lint|test|typecheck)/'",
     "version-package": "pnpm run check-all && changeset version",
@@ -54,12 +54,12 @@
   },
   "exports": {
     "./results": {
-      "types": "./dist/results/index.d.ts",
-      "import": "./dist/results/index.mjs"
+      "types": "./results/index.d.ts",
+      "import": "./results/index.mjs"
     }
   },
   "files": [
-    "dist",
+    "results",
     "package.json",
     "README.md",
     "LICENSE"

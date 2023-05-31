@@ -1,4 +1,5 @@
 build
 dist
+results
 node_modules
 coverage
