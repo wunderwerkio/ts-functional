@@ -1,5 +1,11 @@
 # @wunderwerk/ts-functional
 
+## 1.0.0-beta.3
+
+### Patch Changes
+
+- [`5069a13`](https://github.com/wunderwerkio/ts-functional/commit/5069a139bac4c65f4a3dfcc50c2e3f554cd84f24) Thanks [@chfoidl](https://github.com/chfoidl)! - Increase compatibility with legacy module resolution
+
 ## 1.0.0-beta.2
 
 ### Patch Changes
